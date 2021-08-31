@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { scaledValue } from './Utils/CommonUtils';
 import { LinearGradient } from 'expo-linear-gradient';
-import Content from './components/content.tsx';
+import Content from './components/Content/content';
 
 export default function EarthWallet() {
   return (
     <View style={styles.container}>
       <LinearGradient
-        // Background Linear Gradient
         colors={['#7DAFDF', 'transparent']}
         style={styles.background}
       />
@@ -18,7 +18,7 @@ export default function EarthWallet() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex:scaledValue(1),
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#ffffff',
@@ -28,6 +28,6 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     top: 0,
-    height: 700,
+    height:scaledValue(700),
   },  
 });
